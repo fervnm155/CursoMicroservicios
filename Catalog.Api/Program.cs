@@ -16,7 +16,7 @@ namespace Catalog.Api
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
-            //inheccion
+            //injeccion
             builder.Services.AddScoped<ICatalogService,CatalogService>();
             builder.Services.AddScoped<IProductRepository,ProductRepository>();
 
