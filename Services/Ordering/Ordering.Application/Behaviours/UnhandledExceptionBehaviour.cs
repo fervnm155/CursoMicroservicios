@@ -12,10 +12,10 @@ namespace Ordering.Application.Behaviours
     {
         private readonly ILogger logger;
 
-        public UnhandledExceptionBehaviour(ILogger logger)
-        {
-            this.logger = logger;
-        }
+        //public UnhandledExceptionBehaviour(ILogger logger)
+        //{
+        //    this.logger = logger;
+        //}
 
         public async Task<TResponse>Handle(TRequest request, RequestHandlerDelegate<TResponse> next, CancellationToken cancellationToken)
         {
@@ -26,7 +26,7 @@ namespace Ordering.Application.Behaviours
             catch(Exception ex)
             {
                 var requestName=typeof(TRequest).Name;
-                logger.LogError(ex, $"Excepcion no controlada para la peticion {requestName}.");
+                //logger.LogError(ex, $"Excepcion no controlada para la peticion {requestName}.");
                 throw;
             }
         }
